@@ -38,6 +38,29 @@
         tap-ms = <30>;
     };
 
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(C)>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(V)>;
+            label = "PASTE";
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X)>;
+            label = "CUT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -69,10 +92,10 @@
         layer_3 {
             display-name = "layer1";
             bindings = <
-&trans          &trans            &trans        &trans            &trans     &trans      &mmv MOVE_UP     &kp F6     &kp F7    &kp F8      &kp F9     &kp F10           &kp F11
-&trans          &trans            &mkp LCLK     &mkp MCLK         &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP      &kp END    &kp MINUS         &kp EQUAL
-&trans          &trans            &trans        &trans            &trans     &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &trans            &trans        &trans            &trans     &trans      &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &kp F11    &kp F12           &trans
+&trans          &trans            &trans        &trans            &trans     &trans      &mmv MOVE_UP     &trans     &trans    &trans      &trans     &trans  &trans
+&trans          &trans            &mkp LCLK     &mkp MCLK         &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP      &kp END    &trans  &trans
+&trans          &trans            &trans        &trans            &trans     &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &trans  &trans
+&kp LEFT_SHIFT  &trans            &cut          &copy             &paste     &trans      &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &trans  &trans
 &kp C_MUTE      &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &trans      &mkp LCLK        &trans     &trans    &trans      &trans     &trans
             >;
 
@@ -81,10 +104,10 @@
 
         layer_2 {
             bindings = <
-&kp F1          &kp F2                &kp F3                 &kp F4            &kp F5        &kp F6          &mmv MOVE_UP     &kp F7     &kp F8    &kp F9      &kp F10    &kp F12    &kp F13
+&kp F1          &kp F2                &kp F3                 &kp F4            &kp F5        &kp F6          &mmv MOVE_UP     &kp F7     &kp F8    &kp F9      &kp F10    &kp F11    &kp F12
 &kp GRAVE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N7            &kp NUMBER_8  &kp NUMBER_9    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP      &kp END    &kp MINUS  &kp EQUAL
 &trans          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_4      &kp NUMBER_5  &kp NUMBER_6    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &kp UNDER  &kp PLUS
-&kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3    &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &kp F12    &trans
+&kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3    &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &trans     &trans
 &kp C_MUTE      &kp LEFT_CONTROL      &kp LEFT_ALT           &kp LEFT_COMMAND  &kp NUMBER_0  &trans          &mkp LCLK        &trans     &trans    &trans      &trans     &trans
             >;
 
