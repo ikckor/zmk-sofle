@@ -104,9 +104,9 @@
 
         secondary {
             bindings = <
-&kp F1          &kp F2                &kp F3                 &kp F4        &kp F5        &kp F6          &mmv MOVE_UP     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
-&kp GRAVE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N7        &kp NUMBER_8  &kp NUMBER_9    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp MINUS  &kp EQUAL
-&trans          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp UNDER  &kp PLUS
+&kp GRAVE       &kp F1                &kp F2                 &kp F3        &kp F4        &kp F5          &mmv MOVE_UP     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+&trans          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N7        &kp NUMBER_8  &kp NUMBER_9    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp PLUS   &kp MINUS
+&trans          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp EQUAL  &kp UNDER
 &kp LEFT_SHIFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &mmv MOVE_RIGHT  &trans     &kp GRAVE  &kp MINUS  &kp EQUAL  &trans     &trans
 &kp C_MUTE      &kp LEFT_CONTROL      &kp LEFT_ALT           &kp NUMBER_0  &kp LEFT_GUI  &kp SPACE       &mkp LCLK        &trans     &trans     &trans     &trans     &trans
             >;
